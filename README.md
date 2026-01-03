@@ -121,10 +121,10 @@ counterfactual:
 If you use this code in your research, please cite:
 ```bibtex
 @article{cfmarl2024,
-  title={Counterfactual Multi-Agent Reinforcement Learning for Causal Discovery},
-  author={Research Team},
-  journal={arXiv preprint},
-  year={2024}
+  title={Counterfactual Multi-Agent Reinforcement Learning for Causal Defect Analysis in Manufacturing Environments},
+  author={Sudhanshu Srivastava, Faisal Aqlan, Pratik J. Parikh, Md Noor-E-Alam},
+  journal={NA},
+  year={2026}
 }
 ```
 
