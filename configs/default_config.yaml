@@ -1,0 +1,52 @@
+total_timesteps: 500000
+num_agents: 3
+eval_interval: 25000
+checkpoint_interval: 50000
+seed: 42
+device: auto
+verbose: 1
+tensorboard_log: ./experiments/logs
+checkpoint_dir: ./experiments/checkpoints
+results_dir: ./experiments/results
+
+ppo:
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  normalize_advantage: true
+  target_kl: null
+
+mask:
+  learning_rate: 0.0005
+  lambda_prior: 0.15
+  update_steps: 10
+  update_frequency: 5000
+  weight_decay: 0.0
+  gradient_clip: null
+
+consensus:
+  zeta: 0.3
+  interval: 5000
+  enabled: true
+  majority_threshold: 0.5
+
+environment:
+  alpha: 0.02
+  beta: 10.0
+  tau: 0.5
+  z_clip: 10.0
+  action_clip: 0.5
+  cache_size: 256
+
+counterfactual:
+  max_samples: null
+  max_values_per_feature: null
+  use_cache: true
+  cache_size: 1024
